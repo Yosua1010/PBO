@@ -1,11 +1,18 @@
-package com.mycompany.soal2;
+import java.util.Scanner;
+
 public class Soal2 {
     public static void main(String[] args) {
-        final double CM_PER_INCH = 2.54;
-        double paperWidth = 8.5;
-        double paperHeight = 11;
-        System.out.println("Paper size in centimeters: " +
-                paperWidth * CM_PER_INCH + " by " + paperHeight *
-                CM_PER_INCH);
+        Scanner scanner = new Scanner(System.in);
+
+        // Membaca input secara berulang sampai tidak ada input lagi
+        while (scanner.hasNext()) {
+            String str = scanner.next();
+            int num = scanner.nextInt();
+
+            // Mencetak output dengan format yang sesuai
+            System.out.printf("%-15s%03d%n", str, num);
+        }
+
+        scanner.close();
     }
 }
